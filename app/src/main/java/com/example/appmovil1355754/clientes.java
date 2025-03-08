@@ -3,8 +3,6 @@ package com.example.appmovil1355754;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,35 +10,28 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class PantallaInicio extends AppCompatActivity {
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+public class clientes extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_pantalla_inicio);
+        setContentView(R.layout.activity_clientes);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        Button btnCerrarSesion = findViewById(R.id.btnCerrarSesionPantalla);
+        FloatingActionButton btnRegistrarClienteir = findViewById(R.id.btnRegistrarclientes);
 
-        btnCerrarSesion.setOnClickListener(new View.OnClickListener() {
+        btnRegistrarClienteir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent conectar = new Intent(PantallaInicio.this,MainActivity.class);
-                startActivity(conectar);
+                Intent conecc = new Intent(clientes.this,registrarcliente.class);
+                startActivity(conecc);
             }
         });
-        ImageView btnClientes = findViewById(R.id.btnclientes);
-        btnClientes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent conectar1 = new Intent(PantallaInicio.this,clientes.class);
-                startActivity(conectar1);
-            }
-        });
-
     }
 }
