@@ -199,7 +199,7 @@
         android:layout_height="wrap_content"
         android:columnCount="3"
         android:rowCount="1"
-        android:layout_margin="30dp">
+        android:layout_margin="43dp">
         <Button
             android:id="@+id/btnRegistrarCliente"
             android:layout_width="match_parent"
